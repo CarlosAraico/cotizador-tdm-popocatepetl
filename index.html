@@ -623,6 +623,7 @@
 
   <!-- ====== REACT APP QUOTATION SYSTEM ====== -->
   <script type="text/babel">
+    window.addEventListener('DOMContentLoaded', function() {
     const { useState, useEffect, useMemo, useCallback } = React;
     const { jsPDF } = window.jspdf;
 
@@ -2314,45 +2315,13 @@
       );
     }
 
-    // Render React App
-    function renderReactApp() {
-      if (typeof React === 'undefined') {
-        console.error('React not loaded');
-        setTimeout(renderReactApp, 100);
-        return;
-      }
-      if (typeof ReactDOM === 'undefined') {
-        console.error('ReactDOM not loaded');
-        setTimeout(renderReactApp, 100);
-        return;
-      }
-      if (typeof App === 'undefined') {
-        console.error('App component not defined yet - Babel still processing');
-        setTimeout(renderReactApp, 100);
-        return;
-      }
-      
-      const rootElement = document.getElementById('root');
-      if (!rootElement) {
-        console.error('Root element not found');
-        return;
-      }
-      
-      try {
-        const root = ReactDOM.createRoot(rootElement);
-        root.render(React.createElement(App));
-        console.log('React App rendered successfully');
-      } catch (error) {
-        console.error('Error rendering React App:', error);
-      }
+    // Render React App (auto-execute after Babel processes)
+    const rootElement = document.getElementById('root');
+    if (rootElement && typeof ReactDOM !== 'undefined') {
+      const root = ReactDOM.createRoot(rootElement);
+      root.render(<App />);
     }
-
-    // Wait for DOMContentLoaded and give Babel time to process
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => setTimeout(renderReactApp, 200));
-    } else {
-      setTimeout(renderReactApp, 200);
-    }
+    }); // End DOMContentLoaded
   </script>
 </body>
 </html>
