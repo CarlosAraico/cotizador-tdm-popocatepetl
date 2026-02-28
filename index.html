@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Cotiza con nosotros en Tacos Don Manolito Popocatepetl</title>
 
   <!-- ====== TECH PACK (Front-end) ====== -->
@@ -25,17 +28,6 @@
 
   <!-- Magnific Popup (lightbox) -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
-
-  <!-- React 18 UMD -->
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-
-  <!-- Babel Standalone -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-  <!-- jsPDF + AutoTable -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 
   <style>
     /* =========================
@@ -265,21 +257,14 @@
 
   <!-- Topbar -->
   <div class="topbar" style="background: linear-gradient(90deg, #2C2C2C 0%, #1a1a1a 100%); border-bottom: 2px solid #DAA520;">
-    <div class="container-wide d-flex flex-wrap gap-3 justify-content-between align-items-center py-2">
-      <div class="d-flex flex-wrap gap-3 align-items-center">
-        <span><i class="fa-solid fa-phone me-2" style="color: #DAA520;"></i><a href="tel:5645960445">5645 960 445</a></span>
-        <span class="d-none d-md-inline" style="color: #DAA520;">•</span>
-        <span><i class="fa-solid fa-envelope me-2" style="color: #DAA520;"></i><a href="mailto:popocatepetl@tacosdonmanolito.com">popocatepetl@tacosdonmanolito.com</a></span>
+    <div class="container-wide d-flex justify-content-between align-items-center py-2">
+      <div class="d-flex align-items-center gap-2">
+        <img src="https://i.ibb.co/FRzgZFw/Logo-TDM-On-Black.png" alt="TDM Logo" style="height: 36px; width: auto;">
+        <span style="color: rgba(255,255,255,0.9); font-weight: 600; letter-spacing: 0.5px;">Popocatépetl</span>
       </div>
-      <div class="d-flex gap-2 align-items-center">
-        <span class="d-none d-md-inline">Popocatépetl</span>
-        <a href="https://wa.me/5645960445" target="_blank" rel="noopener noreferrer" 
-           style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: linear-gradient(135deg, #25D366 0%, #1FAE56 100%); color: #fff; text-decoration: none; border-radius: 999px; font-weight: 700; font-size: 0.875rem; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); transition: all 0.2s ease;" 
-           onMouseEnter="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(37, 211, 102, 0.4)'"
-           onMouseLeave="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(37, 211, 102, 0.3)'">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
-      </div>
+      <a href="#cotizador" class="btn btn-sm btn-warning fw-bold" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">
+        <i class="fa-solid fa-calculator me-1"></i>Ir al cotizador
+      </a>
     </div>
   </div>
 
@@ -291,22 +276,6 @@
      title="Contactar por WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
-
-  <!-- Preloader -->
-  <div id="preloader" aria-hidden="true">
-    <div class="text-center">
-      <div class="spinner mx-auto mb-3"></div>
-      <div style="color: rgba(255,255,255,.85); font-weight: 700; letter-spacing: .3px;">
-        Cargando…
-      </div>
-    </div>
-  </div>
-
-        <span class="d-none d-md-inline">•</span>
-        <a class="btn btn-sm btn-warning fw-bold" href="#cotizador">Ir al cotizador</a>
-      </div>
-    </div>
-  </div>
 
   <!-- Nav shell -->
   <div class="nav-shell">
@@ -448,6 +417,90 @@
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer style="background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%); border-top: 2px solid #DAA520; margin-top: 4rem; padding: 3rem 0 1.5rem;">
+    <div class="container-wide">
+      <!-- Main Footer Content -->
+      <div class="row g-4 mb-4">
+        <!-- Brand Column -->
+        <div class="col-md-4 col-lg-3 d-flex flex-column align-items-center align-md-items-start text-center text-md-start">
+          <div class="display-font" style="font-size: 1.8rem; color: var(--tdm-accent); font-weight: 700; margin-bottom: 0.5rem;">
+            Popocatépetl
+          </div>
+          <p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; margin: 0;">
+            Catering y eventos especializados en tacos
+          </p>
+        </div>
+        
+        <!-- Contact Column -->
+        <div class="col-md-4 col-lg-3 d-flex flex-column align-items-center align-md-items-start text-center text-md-start">
+          <h5 style="color: #fff; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.9rem;">
+            Contacto
+          </h5>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <a href="tel:5645960445" style="display: inline-flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.85); text-decoration: none; transition: all 0.2s ease;" 
+               onMouseEnter="this.style.color='#DAA520'" onMouseLeave="this.style.color='rgba(255,255,255,0.85)'">
+              <i class="fa-solid fa-phone" style="color: var(--tdm-accent); font-size: 1rem;"></i>
+              <span>5645 960 445</span>
+            </a>
+            <a href="mailto:popocatepetl@tacosdonmanolito.com" style="display: inline-flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.85); text-decoration: none; transition: all 0.2s ease;" 
+               onMouseEnter="this.style.color='#DAA520'" onMouseLeave="this.style.color='rgba(255,255,255,0.85)'">
+              <i class="fa-solid fa-envelope" style="color: var(--tdm-accent); font-size: 1rem;"></i>
+              <span>popocatepetl@tacosdonmanolito.com</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Social Column -->
+        <div class="col-md-4 col-lg-2 d-flex flex-column align-items-center align-md-items-start text-center text-md-start">
+          <h5 style="color: #fff; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.9rem;">
+            Conecta
+          </h5>
+          <a href="https://wa.me/5645960445" target="_blank" rel="noopener noreferrer" 
+             style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: linear-gradient(135deg, #25D366 0%, #1FAE56 100%); color: #fff; text-decoration: none; border-radius: 999px; font-weight: 600; font-size: 0.9rem; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);" 
+             onMouseEnter="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(37, 211, 102, 0.5)'"
+             onMouseLeave="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(37, 211, 102, 0.3)'">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+        
+        <!-- Quick Links Column -->
+        <div class="col-md-12 col-lg-4 d-flex flex-column align-items-center align-lg-items-start text-center text-lg-start">
+          <h5 style="color: #fff; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.9rem;">
+            Enlaces
+          </h5>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <a href="#inicio" style="color: rgba(255,255,255,0.75); text-decoration: none; transition: all 0.2s ease;" 
+               onMouseEnter="this.style.color='#DAA520'" onMouseLeave="this.style.color='rgba(255,255,255,0.75)'">
+              Inicio
+            </a>
+            <a href="#galeria" style="color: rgba(255,255,255,0.75); text-decoration: none; transition: all 0.2s ease;" 
+               onMouseEnter="this.style.color='#DAA520'" onMouseLeave="this.style.color='rgba(255,255,255,0.75)'">
+              Galería
+            </a>
+            <a href="#cotizador" style="color: rgba(255,255,255,0.75); text-decoration: none; transition: all 0.2s ease;" 
+               onMouseEnter="this.style.color='#DAA520'" onMouseLeave="this.style.color='rgba(255,255,255,0.75)'">
+              Cotizador
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer Divider -->
+      <div style="border-top: 1px solid rgba(218, 165, 32, 0.3); padding-top: 1.5rem; margin-top: 1.5rem;">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-center text-md-start">
+          <p style="color: rgba(255,255,255,0.65); font-size: 0.85rem; margin: 0;">
+            © 2026 Tacos Don Manolito Popocatépetl. Todos los derechos reservados.
+          </p>
+          <p style="color: rgba(255,255,255,0.65); font-size: 0.85rem; margin: 0;">
+            Desarrollado con <i class="fa-solid fa-heart" style="color: #E84C3D;"></i> para eventos inolvidables
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <!-- Newsletter Modal -->
   <div class="modal fade" id="newsletterModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -475,11 +528,22 @@
   </button>
 
   <!-- ====== JS LIBRARIES ====== -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+  <!-- React 18 UMD (moved from head for performance) -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+
+  <!-- Babel Standalone -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- jsPDF + AutoTable -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 
   <script>
     // Preloader fallback - hide loading screen
@@ -1108,7 +1172,12 @@
       // State for initial gates
       const [gateHasOrdered, setGateHasOrdered] = useState("");
       const [gateEventType, setGateEventType] = useState("");
-      const [clientPick, setClientPick] = useState("");
+      
+      // NEW STATES: Privacy-focused client search
+      const [searchEmail, setSearchEmail] = useState("");
+      const [isVerified, setIsVerified] = useState(false);
+      const [contactPreference, setContactPreference] = useState("Email");
+      const [clientStatusMsg, setClientStatusMsg] = useState("");
 
       // Event date & people
       const [eventDate, setEventDate] = useState("");
@@ -1136,23 +1205,47 @@
       const [sortMode, setSortMode] = useState("az");
       const [showAlerts, setShowAlerts] = useState(true);
 
-      // Computed: selected client
+      // Computed: selected client by email search (privacy-focused)
       const selectedClient = useMemo(() => {
-        const idx = parseInt(clientPick, 10);
-        if (!Number.isFinite(idx) || idx < 0) return null;
-        return DATA_CLIENTS[idx] ?? null;
-      }, [clientPick]);
+        if (!searchEmail.trim()) return null;
+        const key = searchEmail.trim().toLowerCase();
+        return DATA_CLIENTS.find(c => (c.correo || "").trim().toLowerCase() === key) || null;
+      }, [searchEmail]);
 
-      // Auto-fill client info when selected
+      // Auto-fill client info when verified with matching email
       useEffect(() => {
-        if (gateHasOrdered !== "Sí") return;
+        if (!isVerified) return;
+        
         if (selectedClient) {
-          setClientName(selectedClient.cliente ?? "");
-          setPhone(selectedClient.telefono ?? "");
-          setEmail(selectedClient.correo ?? "");
-          setAddress(selectedClient.direccion ?? "");
+          setClientName(selectedClient.cliente || "");
+          setPhone(selectedClient.telefono || "");
+          setEmail(selectedClient.correo || "");
+          setAddress(selectedClient.direccion || "");
+        } else {
+          // Client not found in database: allow manual entry
+          setClientName("");
+          setPhone("");
+          setEmail(searchEmail);
+          setAddress("");
         }
-      }, [gateHasOrdered, selectedClient]);
+      }, [isVerified, selectedClient, searchEmail]);
+
+      // Handler: verify client by email
+      const handleVerifyEmail = useCallback(() => {
+        const trimmedEmail = searchEmail.trim();
+        if (!trimmedEmail.includes("@")) {
+          setClientStatusMsg("Por favor ingresa un correo válido (@)");
+          setIsVerified(false);
+          return;
+        }
+        
+        setIsVerified(true);
+        if (selectedClient) {
+          setClientStatusMsg("¡Bienvenido de nuevo!");
+        } else {
+          setClientStatusMsg("Por favor completa tus datos");
+        }
+      }, [searchEmail, selectedClient]);
 
       // Computed: gates ready
       const gatesReady = useMemo(() => gateHasOrdered && gateEventType, [gateHasOrdered, gateEventType]);
@@ -1184,6 +1277,550 @@
       // Computed: groups
       const groups = useMemo(() => {
         const s = new Set(enabledProducts.map(p => p.grupo).filter(Boolean));
+        return Array.from(s).sort((a, b) => String(a).localeCompare(String(b), CONFIG.language));
+      }, [enabledProducts]);
+
+      // Computed: products in selected group
+      const productsInGroup = useMemo(() => {
+        const arr = enabledProducts.filter(p => (prodGroup ? p.grupo === prodGroup : true));
+        return arr.sort((a, b) => String(a.platillo).localeCompare(String(b.platillo), CONFIG.language));
+      }, [enabledProducts, prodGroup]);
+
+      // Computed: picked product
+      const pickedProduct = useMemo(() => {
+        const idx = parseInt(prodPick, 10);
+        if (!Number.isFinite(idx) || idx < 0) return null;
+        return productsInGroup[idx] ?? null;
+      }, [prodPick, productsInGroup]);
+
+      // Computed: people numbers
+      const totalPeopleNum = useMemo(() => toNumberSafe(normalizeMoneyInput(peopleTotal)), [peopleTotal]);
+      const kidsNum = useMemo(() => (hasKids ? toNumberSafe(normalizeMoneyInput(kidsCount)) : 0), [hasKids, kidsCount]);
+      const adultsNum = useMemo(() => Math.max(0, totalPeopleNum - kidsNum), [totalPeopleNum, kidsNum]);
+
+      // Computed: totals
+      const subtotal = useMemo(() => lines.reduce((acc, l) => acc + toNumberSafe(l.total), 0), [lines]);
+      const total = useMemo(() => subtotal, [subtotal]);
+      const pricePerPerson = useMemo(() => (adultsNum > 0 ? total / adultsNum : 0), [total, adultsNum]);
+
+      // Computed: service duration
+      const durationHours = useMemo(() => {
+        const h = parseInt(serviceBlock, 10);
+        return Number.isFinite(h) ? h : 0;
+      }, [serviceBlock]);
+      const serviceEnd = useMemo(() => addHoursToTime(serviceStart, durationHours), [serviceStart, durationHours]);
+
+      // Computed: phone needed based on contact preference
+      const needsPhone = useMemo(() => contactPreference === "WhatsApp" || contactPreference === "Llamada", [contactPreference]);
+
+      // Computed: warnings
+      const warnings = useMemo(() => {
+        const w = [];
+        if (gateEventType && totalPeopleNum) {
+          if (totalPeopleNum < 40 && gateEventType !== "Catering") w.push("Por regla comercial, < 40 personas sugiere Catering.");
+          if (totalPeopleNum >= 40 && gateEventType !== "Evento") w.push("Por regla comercial, ≥ 40 personas sugiere Evento.");
+        }
+        if (hasKids && kidsNum > totalPeopleNum) w.push("Número de niños no puede ser mayor al total de personas.");
+        if (adultsNum <= 0 && totalPeopleNum > 0) w.push("Debe haber al menos 1 adulto.");
+        return w;
+      }, [gateEventType, totalPeopleNum, hasKids, kidsNum, adultsNum]);
+
+      // Computed: missing fields with contact preference logic
+      const missingFields = useMemo(() => {
+        const missing = [];
+        if (!gatesReady) missing.push("Tipo de evento");
+        if (!eventDate) missing.push("Fecha del evento");
+        if (!peopleTotal || totalPeopleNum <= 0) missing.push("Número de personas");
+        if (!setupTime) missing.push("Horario de montaje");
+        if (!serviceStart) missing.push("Horario de servicio");
+        if (!serviceBlock) missing.push("Duración de servicio");
+        if (!email) missing.push("Correo electrónico");
+        if (needsPhone && !phone) missing.push("Teléfono");
+        if (!address) missing.push("Dirección del evento");
+        if (!mapsUrl) missing.push("Liga de Google Maps");
+        if (hasKids && (!kidsCount || kidsNum > totalPeopleNum)) missing.push("Número de niños válido");
+        if (adultsNum <= 0) missing.push("Al menos 1 adulto");
+        return missing;
+      }, [gatesReady, eventDate, peopleTotal, totalPeopleNum, setupTime, serviceStart, serviceBlock, email, needsPhone, phone, address, mapsUrl, hasKids, kidsCount, kidsNum, adultsNum]);
+
+      // Computed: can export PDF
+      const canExportPdf = useMemo(() => lines.length > 0 && missingFields.length === 0, [lines, missingFields]);
+
+      // Handler: add product line
+      const addLine = useCallback(() => {
+        if (!pickedProduct) return;
+        const qty = toNumberSafe(normalizeMoneyInput(prodQty));
+        if (qty <= 0) return;
+        const precio = toNumberSafe(pickedProduct.precioVenta);
+        const newLine = {
+          id: Date.now(),
+          tipoEvento: pickedProduct.tipoEvento,
+          grupo: pickedProduct.grupo,
+          platillo: pickedProduct.platillo,
+          precioUnit: precio,
+          qty,
+          total: precio * qty
+        };
+        setLines(prev => [...prev, newLine]);
+        setProdPick("");
+        setProdQty("");
+      }, [pickedProduct, prodQty]);
+
+      // Handler: remove product line
+      const removeLine = useCallback((id) => setLines(prev => prev.filter(l => l.id !== id)), []);
+
+      // Computed: sorted lines
+      const sortedLines = useMemo(() => {
+        const arr = [...lines];
+        if (sortMode === "az") arr.sort((a, b) => String(a.platillo).localeCompare(String(b.platillo), CONFIG.language));
+        else if (sortMode === "za") arr.sort((a, b) => String(b.platillo).localeCompare(String(a.platillo), CONFIG.language));
+        else if (sortMode === "min") arr.sort((a, b) => toNumberSafe(a.total) - toNumberSafe(b.total));
+        else if (sortMode === "max") arr.sort((a, b) => toNumberSafe(b.total) - toNumberSafe(a.total));
+        return arr;
+      }, [lines, sortMode]);
+
+      // Handler: export PDF
+      const handleExportPdf = useCallback(() => {
+        if (!canExportPdf) return;
+        exportToPDF({
+          clientName, phone, email, address, eventDate,
+          totalPeople: totalPeopleNum,
+          hasKids, kidsCount: kidsNum,
+          setupTime, serviceStart, serviceHours: durationHours, serviceEnd,
+          lines: sortedLines, subtotal, total, pricePerPerson,
+          eventType: gateEventType
+        });
+      }, [canExportPdf, clientName, phone, email, address, eventDate, totalPeopleNum, hasKids, kidsNum, setupTime, serviceStart, durationHours, serviceEnd, sortedLines, subtotal, total, pricePerPerson, gateEventType]);
+
+      // Render
+      return (
+        <div style={{ minHeight: "100vh", background: COLORS.background, paddingBottom: "2rem" }}>
+          {/* STICKY HEADER */}
+          <header style={{
+            position: "sticky",
+            top: 0,
+            zIndex: 100,
+            background: "linear-gradient(135deg, #8B4513 0%, #6B3410 100%)",
+            color: "#fff",
+            boxShadow: "var(--tdm-shadow-3d)",
+            borderBottom: "2px solid rgba(218, 165, 32, 0.3)"
+          }}>
+            <div className="container-wide" style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem", flexWrap: "wrap" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                <img
+                  src="https://i.ibb.co/FRzgZFw/Logo-TDM-On-Black.png"
+                  alt="Tacos Don Manolito"
+                  style={{ 
+                    height: isMobile ? "55px" : "70px", 
+                    width: "auto",
+                    filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.35))"
+                  }}
+                  onError={(e) => {
+                    e.target.style.display = "none";
+                    if (e.target.nextElementSibling) e.target.nextElementSibling.style.display = "block";
+                  }}
+                />
+                <div style={{ display: "none" }}>
+                  <div style={{ fontWeight: 900, fontSize: "1.25rem", letterSpacing: "0.5px" }}>TACOS DON MANOLITO</div>
+                  <div style={{ fontSize: "0.875rem", opacity: 0.9 }}>{CONFIG.branchName}</div>
+                </div>
+              </div>
+              <div style={{ flex: 1, marginLeft: "1rem" }}>
+                <h1 style={{
+                  fontSize: isMobile ? "1rem" : isTabletPortrait ? "1.1rem" : "1.25rem",
+                  fontWeight: 700,
+                  margin: 0,
+                  letterSpacing: "0.3px"
+                }}>
+                  {CONFIG.pageTitle}
+                </h1>
+                <p style={{ fontSize: isMobile ? "0.8rem" : "0.875rem", opacity: 0.9, margin: 0 }}>
+                  Sistema de Cotización | {CONFIG.branchName}
+                </p>
+              </div>
+              <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", flexWrap: "wrap" }}>
+                {gatesReady ? <Badge tone="success">✓ Inicio OK</Badge> : <Badge tone="error">Completa inicio</Badge>}
+                <Button onClick={handleExportPdf} disabled={!canExportPdf} variant="success" fullWidth={isMobile}>
+                  📄 Exportar PDF
+                </Button>
+              </div>
+            </div>
+          </header>
+
+          <div className="container-wide" style={{ marginTop: "1.5rem" }}>
+            {!canExportPdf && showAlerts && missingFields.length > 0 && (
+              <Alert tone="warning" onClose={() => setShowAlerts(false)}>
+                <strong>Faltan campos requeridos para exportar:</strong>
+                <ul style={{ margin: "0.5rem 0 0 1.5rem", padding: 0 }}>
+                  {missingFields.map((field, i) => <li key={i}>{field}</li>)}
+                </ul>
+              </Alert>
+            )}
+            {warnings.length > 0 && showAlerts && (
+              <div style={{ marginTop: "1rem" }}>
+                <Alert tone="warning">
+                  <strong>Advertencias:</strong>
+                  <ul style={{ margin: "0.5rem 0 0 1.5rem", padding: 0 }}>
+                    {warnings.map((w, i) => <li key={i}>{w}</li>)}
+                  </ul>
+                </Alert>
+              </div>
+            )}
+
+            <div style={{
+              display: isMobile || isTabletPortrait ? "flex" : "grid",
+              flexDirection: isMobile || isTabletPortrait ? "column" : undefined,
+              gridTemplateColumns: !isMobile && !isTabletPortrait
+                ? (isTabletLandscape ? "minmax(0, 1.4fr) minmax(0, 1fr)" : "minmax(0, 1.8fr) minmax(0, 1fr)")
+                : undefined,
+              gap: "1.5rem",
+              marginTop: "1.5rem"
+            }}>
+              <div style={{ display: "grid", gap: "1.5rem", alignContent: "start", width: "100%" }}>
+                {/* SECTION 1: INICIO */}
+                <Section
+                  title="1. Inicio"
+                  right={gatesReady ? <Badge tone="success">Completo</Badge> : <Badge tone="error">Pendiente</Badge>}
+                  tone={gatesReady ? "success" : "error"}
+                >
+                  <div style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+                    gap: "1rem"
+                  }}>
+                    <Field label="¿Ya ha cotizado con nosotros antes?" required>
+                      <Select
+                        value={gateHasOrdered}
+                        onChange={(v) => { 
+                          setGateHasOrdered(v); 
+                          if (v !== "Sí") {
+                            setSearchEmail("");
+                            setIsVerified(false);
+                            setClientStatusMsg("");
+                          }
+                        }}
+                        options={["Sí", "No"]}
+                      />
+                    </Field>
+                    {gateHasOrdered === "Sí" && (
+                      <div style={{ display: "grid", gap: "0.75rem" }}>
+                        <Field label="Correo electrónico" required hint="Ingresa tu correo para verificar">
+                          <div style={{ display: "flex", gap: "0.5rem", alignItems: "flex-end" }}>
+                            <div style={{ flex: 1 }}>
+                              <Input 
+                                value={searchEmail} 
+                                onChange={setSearchEmail}
+                                type="email"
+                                placeholder="tu@correo.com"
+                                disabled={isVerified}
+                              />
+                            </div>
+                            <Button 
+                              onClick={handleVerifyEmail}
+                              disabled={isVerified || !searchEmail.trim()}
+                              variant={isVerified ? "primary" : "secondary"}
+                              fullWidth={false}
+                            >
+                              {isVerified ? "✓ Verificado" : "Verificar"}
+                            </Button>
+                          </div>
+                        </Field>
+                        {clientStatusMsg && (
+                          <Alert tone={selectedClient ? "success" : "info"}>
+                            {clientStatusMsg}
+                          </Alert>
+                        )}
+                      </div>
+                    )}
+                    <Field label="¿Es un Catering o un Evento?" required hint="Catering: < 40 | Evento: ≥ 40 personas">
+                      <Select value={gateEventType} onChange={setGateEventType} options={["Catering", "Evento"]} />
+                    </Field>
+                  </div>
+                </Section>
+
+                {/* SECTION 2: DATOS DEL EVENTO */}
+                <Section title="2. Datos del Evento">
+                  {!gatesReady ? (
+                    <Alert tone="info">Completa la sección de <strong>Inicio</strong> para continuar.</Alert>
+                  ) : (
+                    <div style={{ display: "grid", gap: "1rem" }}>
+                      <div style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+                        gap: "1rem"
+                      }}>
+                        <Field label="Nombre del cliente">
+                          <Input value={clientName} onChange={setClientName} placeholder="Ej. Juan Pérez" />
+                        </Field>
+                        <Field 
+                          label="Correo electrónico" 
+                          error={!email && missingFields.includes("Correo electrónico") ? "Requerido" : ""}
+                        >
+                          <Input 
+                            value={email} 
+                            onChange={setEmail}
+                            type="email"
+                            placeholder="Ej. cliente@correo.com"
+                            disabled={isVerified || (gateHasOrdered === "Sí" && searchEmail)}
+                          />
+                        </Field>
+                      </div>
+                      <Field label="Dirección del evento" required>
+                        <Input value={address} onChange={setAddress} placeholder="Calle, número, colonia, delegación, CDMX" />
+                      </Field>
+                      <Field label="Liga de Google Maps" required>
+                        <Input value={mapsUrl} onChange={setMapsUrl} type="url" placeholder="https://maps.google.com/..." />
+                      </Field>
+                      <div style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                        gap: "1rem"
+                      }}>
+                        <Field label="Fecha del evento" required>
+                          <Input value={eventDate} onChange={setEventDate} type="date" />
+                        </Field>
+                        <Field label="Número de personas" required hint="< 40 Catering | ≥ 40 Evento">
+                          <Input value={peopleTotal} onChange={setPeopleTotal} type="number" placeholder="Ej. 80" />
+                        </Field>
+                      </div>
+                      <Field label="¿Incluye niños?">
+                        <Toggle value={hasKids} onChange={setHasKids} />
+                      </Field>
+                      {hasKids && (
+                        <Field label="Número de niños" required error={kidsNum > totalPeopleNum ? "No puede ser mayor al total" : ""}>
+                          <Input value={kidsCount} onChange={setKidsCount} type="number" placeholder="Ej. 15" />
+                        </Field>
+                      )}
+                      <div style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+                        gap: "1rem"
+                      }}>
+                        <Field label="Horario de montaje" required>
+                          <Input value={setupTime} onChange={setSetupTime} type="time" />
+                        </Field>
+                        <Field label="Servicio (inicio)" required>
+                          <Input value={serviceStart} onChange={setServiceStart} type="time" />
+                        </Field>
+                        <Field label="Duración" required>
+                          <Select
+                            value={serviceBlock}
+                            onChange={setServiceBlock}
+                            options={SERVICE_BLOCKS.map(x => ({ value: String(x.hours), label: x.label }))}
+                          />
+                        </Field>
+                      </div>
+                      {serviceEnd && (
+                        <Alert tone="info"><strong>Servicio finaliza:</strong> {serviceEnd}</Alert>
+                      )}
+                      <Field label="¿Cómo prefieres que te contactemos?" hint="Según tu preferencia, algunos campos serán requeridos">
+                        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+                          <Button 
+                            onClick={() => setContactPreference("Email")}
+                            variant={contactPreference === "Email" ? "primary" : "secondary"}
+                          >
+                            Email 📧
+                          </Button>
+                          <Button 
+                            onClick={() => setContactPreference("WhatsApp")}
+                            variant={contactPreference === "WhatsApp" ? "primary" : "secondary"}
+                          >
+                            WhatsApp 💬
+                          </Button>
+                          <Button 
+                            onClick={() => setContactPreference("Llamada")}
+                            variant={contactPreference === "Llamada" ? "primary" : "secondary"}
+                          >
+                            Llamada 📞
+                          </Button>
+                        </div>
+                      </Field>
+                      {needsPhone && (
+                        <Field 
+                          label="Teléfono" 
+                          required
+                          error={!phone && missingFields.includes("Teléfono") ? "Requerido" : ""}
+                          hint={`Necesitamos tu teléfono para ${contactPreference === "WhatsApp" ? "enviarte WhatsApp" : "llamarte"}`}
+                        >
+                          <Input value={phone} onChange={setPhone} type="tel" placeholder="Ej. 5645960445" />
+                        </Field>
+                      )}
+                    </div>
+                  )}
+                </Section>
+
+                {/* SECTION 3: PRODUCTOS */}
+                <Section title="3. Productos">
+                  {!gatesReady ? (
+                    <Alert tone="info">Completa la sección de <strong>Inicio</strong> para agregar productos.</Alert>
+                  ) : (
+                    <div style={{ display: "grid", gap: "1rem" }}>
+                      <div style={{
+                        display: "grid",
+                        gridTemplateColumns: isMobile
+                          ? "1fr"
+                          : isTabletPortrait
+                          ? "1fr 1fr"
+                          : "1fr 1.5fr 0.8fr auto",
+                        gap: "0.75rem",
+                        alignItems: "end"
+                      }}>
+                        <Field label="Grupo">
+                          <Select
+                            value={prodGroup}
+                            onChange={(v) => { setProdGroup(v); setProdPick(""); }}
+                            options={groups}
+                            placeholder="Todos"
+                          />
+                        </Field>
+                        <Field label="Platillo">
+                          <Select
+                            value={prodPick}
+                            onChange={setProdPick}
+                            options={productsInGroup.map((p, i) => ({ value: String(i), label: `${p.platillo} (${formatMXN(p.precioVenta)})` }))}
+                            placeholder="Selecciona..."
+                          />
+                        </Field>
+                        <Field label="Cantidad">
+                          <Input value={prodQty} onChange={setProdQty} type="number" placeholder="Ej. 10" />
+                        </Field>
+                        <Button onClick={addLine} disabled={!pickedProduct || !prodQty} variant="primary" fullWidth={isLaptop || isMobile}>
+                          ➕ Agregar
+                        </Button>
+                      </div>
+                      {sortedLines.length === 0 ? (
+                        <Alert tone="info"><strong>Estado vacío:</strong> Agrega productos para comenzar.</Alert>
+                      ) : (
+                        <>
+                          <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
+                            <span style={{ fontSize: "0.875rem", fontWeight: 600, color: COLORS.muted }}>Ordenar:</span>
+                            <Button onClick={() => setSortMode("az")} variant={sortMode === "az" ? "primary" : "secondary"}>A-Z</Button>
+                            <Button onClick={() => setSortMode("za")} variant={sortMode === "za" ? "primary" : "secondary"}>Z-A</Button>
+                            <Button onClick={() => setSortMode("min")} variant={sortMode === "min" ? "primary" : "secondary"}>Menor</Button>
+                            <Button onClick={() => setSortMode("max")} variant={sortMode === "max" ? "primary" : "secondary"}>Mayor</Button>
+                          </div>
+                          <div style={{ overflowX: "auto" }}>
+                            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+                              <thead>
+                                <tr style={{ background: COLORS.primary, color: "#fff" }}>
+                                  <th style={{ textAlign: "left", padding: "0.75rem" }}>Platillo</th>
+                                  <th style={{ textAlign: "right", padding: "0.75rem" }}>Cantidad</th>
+                                  <th style={{ textAlign: "right", padding: "0.75rem" }}>P. Unitario</th>
+                                  <th style={{ textAlign: "right", padding: "0.75rem" }}>Total</th>
+                                  <th style={{ textAlign: "center", padding: "0.75rem" }}>Acción</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {sortedLines.map((line, idx) => (
+                                  <tr key={line.id} style={{
+                                    borderBottom: `1px solid ${COLORS.border}`,
+                                    background: idx % 2 === 0 ? COLORS.surface : COLORS.background
+                                  }}>
+                                    <td style={{ padding: "0.75rem", fontWeight: 600 }}>{line.platillo}</td>
+                                    <td style={{ padding: "0.75rem", textAlign: "right" }}>{line.qty}</td>
+                                    <td style={{ padding: "0.75rem", textAlign: "right" }}>{formatMXN(line.precioUnit)}</td>
+                                    <td style={{ padding: "0.75rem", textAlign: "right", fontWeight: 700, color: COLORS.primary }}>{formatMXN(line.total)}</td>
+                                    <td style={{ padding: "0.75rem", textAlign: "center" }}>
+                                      <Button onClick={() => removeLine(line.id)} variant="danger">✕</Button>
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  )}
+                </Section>
+              </div>
+
+              {/* SUMMARY SIDEBAR */}
+              <div style={{
+                position: isMobile || isTabletPortrait ? "static" : "sticky",
+                top: isMobile || isTabletPortrait ? "auto" : "120px",
+                alignSelf: "start",
+                maxHeight: isMobile || isTabletPortrait ? "none" : "80vh",
+                width: "100%"
+              }}>
+                <Section
+                  title="Resumen"
+                  right={canExportPdf ? <Badge tone="success">Listo</Badge> : <Badge tone="warning">Revisar</Badge>}
+                  tone={canExportPdf ? "success" : "warning"}
+                >
+                  <div style={{ display: "grid", gap: "1rem", fontSize: "0.875rem" }}>
+                    <div>
+                      <div style={{ fontWeight: 700, fontSize: "1rem", marginBottom: "0.25rem" }}>
+                        {clientName || "Cliente sin nombre"}
+                      </div>
+                      <div style={{ color: COLORS.muted }}>{phone || email || "Sin contacto"}</div>
+                      <div style={{ color: COLORS.muted, fontSize: "0.75rem", marginTop: "0.25rem" }}>
+                        Contacto: <strong>{contactPreference}</strong>
+                      </div>
+                      <div style={{ color: COLORS.muted, fontSize: "0.75rem", marginTop: "0.25rem" }}>
+                        {address || "Sin dirección"}
+                      </div>
+                    </div>
+                    <div style={{ borderTop: `1px solid ${COLORS.border}`, paddingTop: "1rem" }}>
+                      {totalPeopleNum > 0 && (
+                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.5rem" }}>
+                          <span style={{ fontWeight: 600 }}>Personas:</span>
+                          <span>
+                            {totalPeopleNum} total {hasKids && ` (${adultsNum} adultos, ${kidsNum} niños)`}
+                          </span>
+                        </div>
+                      )}
+                      {eventDate && (
+                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.5rem" }}>
+                          <span style={{ fontWeight: 600 }}>Fecha:</span>
+                          <span>{formatDateISO(eventDate)}</span>
+                        </div>
+                      )}
+                      {serviceStart && serviceEnd && (
+                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.5rem" }}>
+                          <span style={{ fontWeight: 600 }}>Horario:</span>
+                          <span>{serviceStart} - {serviceEnd}</span>
+                        </div>
+                      )}
+                    </div>
+                    <div style={{ borderTop: `2px solid ${COLORS.border}`, paddingTop: "1rem" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.5rem", fontSize: "1rem" }}>
+                        <span style={{ fontWeight: 600 }}>Subtotal:</span>
+                        <span style={{ fontWeight: 700 }}>{formatMXN(subtotal)}</span>
+                      </div>
+                      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem", fontSize: "1.25rem" }}>
+                        <span style={{ fontWeight: 700 }}>TOTAL:</span>
+                        <span style={{ fontWeight: 900, color: COLORS.primary }}>{formatMXN(total)}</span>
+                      </div>
+                      {adultsNum > 0 && (
+                        <div style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          padding: "0.75rem",
+                          borderRadius: "var(--tdm-radius-md)",
+                          background: COLORS.background
+                        }}>
+                          <span style={{ fontWeight: 600 }}>Por persona:</span>
+                          <span style={{ fontWeight: 700 }}>{formatMXN(pricePerPerson)}</span>
+                        </div>
+                      )}
+                    </div>
+                    <Button onClick={handleExportPdf} disabled={!canExportPdf} variant="success" fullWidth>
+                      📄 Exportar PDF
+                    </Button>
+                    {!canExportPdf && missingFields.length > 0 && (
+                      <div style={{ fontSize: "0.75rem", color: COLORS.muted, fontStyle: "italic" }}>
+                        Faltan {missingFields.length} campo(s) requerido(s)
+                      </div>
+                    )}
+                  </div>
+                </Section>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
         return Array.from(s).sort((a, b) => String(a).localeCompare(String(b), CONFIG.language));
       }, [enabledProducts]);
 
