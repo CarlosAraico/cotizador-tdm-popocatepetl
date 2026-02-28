@@ -2235,7 +2235,10 @@
                       <div style={{ fontWeight: 700, fontSize: "1rem", marginBottom: "0.25rem" }}>
                         {clientName || "Cliente sin nombre"}
                       </div>
-                      <div style={{ color: COLORS.muted }}>{phone || "Sin teléfono"}</div>
+                      <div style={{ color: COLORS.muted }}>{phone || email || "Sin contacto"}</div>
+                      <div style={{ color: COLORS.muted, fontSize: "0.75rem", marginTop: "0.25rem" }}>
+                        Contacto: <strong>{contactPreference}</strong>
+                      </div>
                       <div style={{ color: COLORS.muted, fontSize: "0.75rem", marginTop: "0.25rem" }}>
                         {address || "Sin dirección"}
                       </div>
@@ -2302,8 +2305,17 @@
     }
 
     // Render React App
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
+    if (typeof React !== 'undefined' && typeof ReactDOM !== 'undefined') {
+      const rootElement = document.getElementById('root');
+      if (rootElement) {
+        const root = ReactDOM.createRoot(rootElement);
+        root.render(<App />);
+      } else {
+        console.error('Root element not found');
+      }
+    } else {
+      console.error('React or ReactDOM not loaded');
+    }
   </script>
 </body>
 </html>
