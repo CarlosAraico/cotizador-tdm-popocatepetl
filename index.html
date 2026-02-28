@@ -1212,9 +1212,9 @@
             <div className="container-wide" style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem", flexWrap: "wrap" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                 <img
-                  src={CONFIG.logoUrl}
+                  src="https://i.ibb.co/FRzgZFw/Logo-TDM-On-Black.png"
                   alt="Tacos Don Manolito"
-                  style={{ height: "50px", width: "auto", filter: "brightness(0) invert(1)" }}
+                  style={{ height: isMobile ? "40px" : "50px", width: "auto" }}
                   onError={(e) => {
                     e.target.style.display = "none";
                     if (e.target.nextElementSibling) e.target.nextElementSibling.style.display = "block";
