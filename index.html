@@ -621,6 +621,23 @@
     });
   </script>
 
+  <!-- Test: Verify Babel is working -->
+  <script>
+    console.log('=== DIAGNOSTIC CHECKS ===');
+    console.log('React available:', typeof React !== 'undefined');
+    console.log('ReactDOM available:', typeof ReactDOM !== 'undefined');
+    console.log('Babel available:', typeof Babel !== 'undefined');
+    console.log('Root element exists:', document.getElementById('root') !== null);
+    
+    // Force Babel to transform scripts if not auto-processing
+    if (typeof Babel !== 'undefined' && Babel.transformScriptTags) {
+      setTimeout(() => {
+        console.log('Manually triggering Babel transformScriptTags...');
+        Babel.transformScriptTags();
+      }, 100);
+    }
+  </script>
+
   <!-- ====== REACT APP QUOTATION SYSTEM ====== -->
   <script type="text/babel">
     window.addEventListener('DOMContentLoaded', function() {
