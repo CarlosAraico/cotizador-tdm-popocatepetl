@@ -1061,6 +1061,8 @@
 
       // Responsive breakpoints
       const isMobile = viewportWidth < 768;
+      const isTabletPortrait = viewportWidth >= 768 && viewportWidth < 992;
+      const isTabletLandscape = viewportWidth >= 992 && viewportWidth < 1200;
       const isLaptop = viewportWidth >= 768 && viewportWidth < 1200;
 
       useEffect(() => {
@@ -1225,7 +1227,7 @@
               </div>
               <div style={{ flex: 1, marginLeft: "1rem" }}>
                 <h1 style={{
-                  fontSize: isMobile ? "1rem" : "1.25rem",
+                  fontSize: isMobile ? "1rem" : isTabletPortrait ? "1.1rem" : "1.25rem",
                   fontWeight: 700,
                   margin: 0,
                   letterSpacing: "0.3px"
@@ -1267,7 +1269,11 @@
 
             <div style={{
               display: "grid",
-              gridTemplateColumns: isLaptop || isMobile ? "1fr" : "minmax(0, 1.8fr) minmax(0, 1fr)",
+              gridTemplateColumns: isMobile || isTabletPortrait
+                ? "1fr"
+                : isTabletLandscape
+                ? "minmax(0, 1.4fr) minmax(0, 1fr)"
+                : "minmax(0, 1.8fr) minmax(0, 1fr)",
               gap: "1.5rem",
               marginTop: "1.5rem"
             }}>
@@ -1387,7 +1393,11 @@
                     <div style={{ display: "grid", gap: "1rem" }}>
                       <div style={{
                         display: "grid",
-                        gridTemplateColumns: isMobile ? "1fr" : isLaptop ? "1fr 1fr" : "1fr 1.5fr 0.8fr auto",
+                        gridTemplateColumns: isMobile
+                          ? "1fr"
+                          : isTabletPortrait
+                          ? "1fr 1fr"
+                          : "1fr 1.5fr 0.8fr auto",
                         gap: "0.75rem",
                         alignItems: "end"
                       }}>
@@ -1463,10 +1473,10 @@
 
               {/* SUMMARY SIDEBAR */}
               <div style={{
-                position: isLaptop || isMobile ? "static" : "sticky",
-                top: isLaptop || isMobile ? "auto" : "120px",
+                position: isMobile || isTabletPortrait ? "static" : "sticky",
+                top: isMobile || isTabletPortrait ? "auto" : "120px",
                 alignSelf: "start",
-                maxHeight: isLaptop || isMobile ? "none" : "80vh"
+                maxHeight: isMobile || isTabletPortrait ? "none" : "80vh"
               }}>
                 <Section
                   title="Resumen"
