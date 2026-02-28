@@ -42,24 +42,27 @@
        DESIGN TOKENS (TDM 2026)
        ========================= */
     :root {
-      --tdm-primary: #864119;
-      --tdm-secondary: #9D5F32;
-      --tdm-accent: #DDB257;
-      --tdm-accent2: #D49D43;
-      --tdm-background: #F1F0EE;
+      --tdm-primary: #8B4513;
+      --tdm-primary-dark: #6B3410;
+      --tdm-primary-light: #A0522D;
+      --tdm-secondary: #CD853F;
+      --tdm-accent: #DAA520;
+      --tdm-accent2: #B8860B;
+      --tdm-background: linear-gradient(135deg, #FAF9F7 0%, #F5F3F0 100%);
       --tdm-surface: #FFFFFF;
-      --tdm-text: #151515;
-      --tdm-muted: #6B6B6B;
-      --tdm-border: #E6E0D8;
-      --tdm-success: #4CAF50;
-      --tdm-warning: #FF9800;
-      --tdm-error: #F44336;
-      --tdm-radius-sm: 8px;
-      --tdm-radius-md: 12px;
-      --tdm-radius-lg: 16px;
-      --tdm-shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-      --tdm-shadow-md: 0 4px 16px rgba(0,0,0,0.12);
-      --tdm-shadow-lg: 0 8px 24px rgba(0,0,0,0.16);
+      --tdm-text: #2C2C2C;
+      --tdm-muted: #707070;
+      --tdm-border: #E8E4DF;
+      --tdm-success: #2E7D32;
+      --tdm-warning: #F57C00;
+      --tdm-error: #C62828;
+      --tdm-radius-sm: 10px;
+      --tdm-radius-md: 14px;
+      --tdm-radius-lg: 20px;
+      --tdm-shadow-sm: 0 2px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06);
+      --tdm-shadow-md: 0 6px 20px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.08);
+      --tdm-shadow-lg: 0 12px 32px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.12);
+      --tdm-shadow-3d: 0 20px 60px rgba(0,0,0,0.25), 0 8px 20px rgba(0,0,0,0.15), inset 0 -2px 4px rgba(0,0,0,0.1);
     }
 
     /* Reset & Base */
@@ -71,9 +74,9 @@
 
     body {
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--tdm-background);
+      background: linear-gradient(135deg, #FAF9F7 0%, #F5F3F0 100%);
       color: var(--tdm-text);
-      line-height: 1.5;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
@@ -182,9 +185,10 @@
       position: sticky;
       top: 0;
       z-index: 1100;
-      background: rgba(134, 65, 25, 0.96);
-      backdrop-filter: blur(10px);
-      box-shadow: var(--tdm-shadow-lg);
+      background: linear-gradient(135deg, rgba(139, 69, 19, 0.97) 0%, rgba(107, 52, 16, 0.97) 100%);
+      backdrop-filter: blur(16px) saturate(180%);
+      box-shadow: var(--tdm-shadow-3d);
+      border-bottom: 1px solid rgba(218, 165, 32, 0.2);
     }
 
     .nav-shell .nav-link {
@@ -205,11 +209,12 @@
     /* Hero section */
     .hero {
       position: relative;
-      background: radial-gradient(1200px 600px at 20% 10%, rgba(221, 178, 87, 0.25), transparent 55%),
-                  radial-gradient(900px 500px at 85% 40%, rgba(212, 157, 67, 0.25), transparent 55%),
-                  linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(218, 165, 32, 0.35), transparent 55%),
+                  radial-gradient(900px 500px at 85% 40%, rgba(184, 134, 11, 0.3), transparent 55%),
+                  linear-gradient(135deg, #1C1410 0%, #0D0805 100%);
       color: #fff;
       overflow: hidden;
+      box-shadow: inset 0 -1px 2px rgba(218, 165, 32, 0.15);
     }
 
     .hero .subtitle {
@@ -280,7 +285,7 @@
       <nav id="topNav" class="navbar navbar-expand-lg navbar-dark py-2">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio" style="font-weight: 900;">
           <img src="https://i.ibb.co/FRzgZFw/Logo-TDM-On-Black.png" alt="TDM"
-               style="height: 34px; width: auto;">
+               style="height: 48px; width: auto; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
           <span class="d-none d-sm-inline">Cotizador</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Toggle navigation">
@@ -417,8 +422,8 @@
   <!-- Newsletter Modal -->
   <div class="modal fade" id="newsletterModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content" style="border-radius: 18px; overflow: hidden;">
-        <div class="modal-header" style="background: var(--tdm-primary); color: #fff;">
+      <div class="modal-content" style="border-radius: 20px; overflow: hidden; box-shadow: var(--tdm-shadow-3d);">
+        <div class="modal-header" style="background: linear-gradient(135deg, #8B4513 0%, #6B3410 100%); color: #fff; border: none;">
           <h5 class="modal-title fw-bold"><i class="fa-regular fa-envelope me-2"></i>Suscríbete</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -528,18 +533,20 @@
     };
 
     const COLORS = {
-      primary: "#864119",
-      secondary: "#9D5F32",
-      accent: "#DDB257",
-      accent2: "#D49D43",
-      background: "#F1F0EE",
+      primary: "#8B4513",
+      primaryDark: "#6B3410",
+      primaryLight: "#A0522D",
+      secondary: "#CD853F",
+      accent: "#DAA520",
+      accent2: "#B8860B",
+      background: "#FAF9F7",
       surface: "#FFFFFF",
-      text: "#151515",
-      muted: "#6B6B6B",
-      border: "#E6E0D8",
-      success: "#4CAF50",
-      warning: "#FF9800",
-      error: "#F44336"
+      text: "#2C2C2C",
+      muted: "#707070",
+      border: "#E8E4DF",
+      success: "#2E7D32",
+      warning: "#F57C00",
+      error: "#C62828"
     };
 
     const DATA_CLIENTS = [
@@ -591,23 +598,25 @@
     // ========================================
     function Badge({ children, tone = "neutral" }) {
       const tones = {
-        neutral: { bg: COLORS.border, fg: COLORS.text },
-        success: { bg: COLORS.success, fg: "#fff" },
-        warning: { bg: COLORS.warning, fg: "#fff" },
-        error: { bg: COLORS.error, fg: "#fff" },
-        primary: { bg: COLORS.primary, fg: "#fff" }
+        neutral: { bg: `linear-gradient(135deg, ${COLORS.border} 0%, #D0CCC7 100%)`, fg: COLORS.text, shadow: "0 2px 6px rgba(0,0,0,0.1)" },
+        success: { bg: `linear-gradient(135deg, ${COLORS.success} 0%, #1B5E20 100%)`, fg: "#fff", shadow: "0 2px 8px rgba(46, 125, 50, 0.3)" },
+        warning: { bg: `linear-gradient(135deg, ${COLORS.warning} 0%, #E65100 100%)`, fg: "#fff", shadow: "0 2px 8px rgba(245, 124, 0, 0.3)" },
+        error: { bg: `linear-gradient(135deg, ${COLORS.error} 0%, #B71C1C 100%)`, fg: "#fff", shadow: "0 2px 8px rgba(198, 40, 40, 0.3)" },
+        primary: { bg: `linear-gradient(135deg, ${COLORS.primary} 0%, ${COLORS.primaryDark} 100%)`, fg: "#fff", shadow: "0 2px 8px rgba(139, 69, 19, 0.3)" }
       };
       const t = tones[tone] || tones.neutral;
       return (
         <span style={{
           display: "inline-block",
-          padding: "4px 12px",
+          padding: "5px 14px",
           borderRadius: "999px",
           background: t.bg,
           color: t.fg,
           fontSize: "0.75rem",
           fontWeight: 700,
-          letterSpacing: "0.5px"
+          letterSpacing: "0.5px",
+          boxShadow: t.shadow,
+          textShadow: tone !== "neutral" ? "0 1px 2px rgba(0,0,0,0.2)" : "none"
         }}>
           {children}
         </span>
@@ -622,13 +631,22 @@
         warning: COLORS.warning,
         error: COLORS.error
       };
+      const shadowColors = {
+        default: "0 8px 24px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)",
+        primary: `0 8px 24px rgba(139, 69, 19, 0.15), 0 2px 8px rgba(139, 69, 19, 0.08)`,
+        success: `0 8px 24px rgba(46, 125, 50, 0.15), 0 2px 8px rgba(46, 125, 50, 0.08)`,
+        warning: `0 8px 24px rgba(245, 124, 0, 0.15), 0 2px 8px rgba(245, 124, 0, 0.08)`,
+        error: `0 8px 24px rgba(198, 40, 40, 0.15), 0 2px 8px rgba(198, 40, 40, 0.08)`
+      };
       return (
         <div style={{
-          background: COLORS.surface,
+          background: `linear-gradient(135deg, ${COLORS.surface} 0%, #FCFCFC 100%)`,
           border: `2px solid ${borderColors[tone] || borderColors.default}`,
           borderRadius: "var(--tdm-radius-lg)",
           padding: "1.5rem",
-          boxShadow: "var(--tdm-shadow-sm)"
+          boxShadow: shadowColors[tone] || shadowColors.default,
+          position: "relative",
+          overflow: "hidden"
         }}>
           <div style={{
             display: "flex",
@@ -637,7 +655,7 @@
             gap: "1rem",
             marginBottom: "1rem",
             paddingBottom: "0.75rem",
-            borderBottom: `1px solid ${COLORS.border}`
+            borderBottom: `2px solid ${COLORS.border}`
           }}>
             <h2 style={{ color: COLORS.text, fontWeight: 700, fontSize: "1.125rem", margin: 0 }}>{title}</h2>
             {right && <div>{right}</div>}
@@ -679,18 +697,25 @@
           disabled={disabled}
           style={{
             width: "100%",
-            padding: "0.75rem",
+            padding: "0.875rem",
             borderRadius: "var(--tdm-radius-md)",
-            border: `1px solid ${COLORS.border}`,
+            border: `2px solid ${COLORS.border}`,
             outline: "none",
             background: disabled ? COLORS.background : COLORS.surface,
             color: COLORS.text,
             fontSize: "0.875rem",
             fontWeight: 500,
-            transition: "border-color 0.2s ease"
+            transition: "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+            boxShadow: "inset 0 2px 4px rgba(0,0,0,0.04)"
           }}
-          onFocus={(e) => e.target.style.borderColor = COLORS.accent}
-          onBlur={(e) => e.target.style.borderColor = COLORS.border}
+          onFocus={(e) => {
+            e.target.style.borderColor = COLORS.accent;
+            e.target.style.boxShadow = `inset 0 2px 4px rgba(0,0,0,0.04), 0 0 0 3px rgba(218, 165, 32, 0.15)`;
+          }}
+          onBlur={(e) => {
+            e.target.style.borderColor = COLORS.border;
+            e.target.style.boxShadow = "inset 0 2px 4px rgba(0,0,0,0.04)";
+          }}
         />
       );
     }
@@ -702,15 +727,25 @@
           onChange={(e) => onChange(e.target.value)}
           style={{
             width: "100%",
-            padding: "0.75rem",
+            padding: "0.875rem",
             borderRadius: "var(--tdm-radius-md)",
-            border: `1px solid ${COLORS.border}`,
+            border: `2px solid ${COLORS.border}`,
             outline: "none",
             background: COLORS.surface,
             color: COLORS.text,
             fontSize: "0.875rem",
             fontWeight: 600,
-            cursor: "pointer"
+            cursor: "pointer",
+            transition: "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+            boxShadow: "inset 0 2px 4px rgba(0,0,0,0.04)"
+          }}
+          onFocus={(e) => {
+            e.target.style.borderColor = COLORS.accent;
+            e.target.style.boxShadow = `inset 0 2px 4px rgba(0,0,0,0.04), 0 0 0 3px rgba(218, 165, 32, 0.15)`;
+          }}
+          onBlur={(e) => {
+            e.target.style.borderColor = COLORS.border;
+            e.target.style.boxShadow = "inset 0 2px 4px rgba(0,0,0,0.04)";
           }}
         >
           <option value="">{placeholder}</option>
@@ -758,10 +793,30 @@
 
     function Button({ children, onClick, disabled = false, variant = "primary", fullWidth = false }) {
       const variants = {
-        primary: { bg: COLORS.primary, color: "#fff", bgHover: COLORS.secondary },
-        secondary: { bg: COLORS.surface, color: COLORS.primary, bgHover: COLORS.background },
-        success: { bg: COLORS.success, color: "#fff", bgHover: "#43A047" },
-        danger: { bg: COLORS.error, color: "#fff", bgHover: "#E53935" }
+        primary: { 
+          bg: `linear-gradient(135deg, ${COLORS.primary} 0%, ${COLORS.primaryDark} 100%)`, 
+          color: "#fff", 
+          bgHover: `linear-gradient(135deg, ${COLORS.primaryLight} 0%, ${COLORS.primary} 100%)`,
+          shadow: "0 4px 14px rgba(139, 69, 19, 0.4)"
+        },
+        secondary: { 
+          bg: COLORS.surface, 
+          color: COLORS.primary, 
+          bgHover: COLORS.background,
+          shadow: "0 4px 12px rgba(0, 0, 0, 0.12)"
+        },
+        success: { 
+          bg: `linear-gradient(135deg, ${COLORS.success} 0%, #1B5E20 100%)`, 
+          color: "#fff", 
+          bgHover: `linear-gradient(135deg, #43A047 0%, ${COLORS.success} 100%)`,
+          shadow: "0 4px 14px rgba(46, 125, 50, 0.4)"
+        },
+        danger: { 
+          bg: `linear-gradient(135deg, ${COLORS.error} 0%, #B71C1C 100%)`, 
+          color: "#fff", 
+          bgHover: `linear-gradient(135deg, #E53935 0%, ${COLORS.error} 100%)`,
+          shadow: "0 4px 14px rgba(198, 40, 40, 0.4)"
+        }
       };
       const v = variants[variant] || variants.primary;
       return (
@@ -778,11 +833,25 @@
             fontSize: "0.875rem",
             fontWeight: 700,
             cursor: disabled ? "not-allowed" : "pointer",
-            transition: "all 0.2s ease",
-            boxShadow: disabled ? "none" : "var(--tdm-shadow-sm)"
+            transition: "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+            boxShadow: disabled ? "none" : v.shadow,
+            transform: disabled ? "none" : "translateY(0)",
+            textShadow: disabled ? "none" : "0 1px 2px rgba(0,0,0,0.2)"
           }}
-          onMouseEnter={(e) => { if (!disabled) e.target.style.background = v.bgHover; }}
-          onMouseLeave={(e) => { if (!disabled) e.target.style.background = v.bg; }}
+          onMouseEnter={(e) => { 
+            if (!disabled) {
+              e.target.style.background = v.bgHover;
+              e.target.style.transform = "translateY(-2px)";
+              e.target.style.boxShadow = disabled ? "none" : v.shadow.replace(/\d+px/, m => parseInt(m) + 2 + "px");
+            }
+          }}
+          onMouseLeave={(e) => { 
+            if (!disabled) {
+              e.target.style.background = v.bg;
+              e.target.style.transform = "translateY(0)";
+              e.target.style.boxShadow = disabled ? "none" : v.shadow;
+            }
+          }}
         >{children}</button>
       );
     }
@@ -1205,16 +1274,21 @@
             position: "sticky",
             top: 0,
             zIndex: 100,
-            background: COLORS.primary,
+            background: "linear-gradient(135deg, #8B4513 0%, #6B3410 100%)",
             color: "#fff",
-            boxShadow: "var(--tdm-shadow-lg)"
+            boxShadow: "var(--tdm-shadow-3d)",
+            borderBottom: "2px solid rgba(218, 165, 32, 0.3)"
           }}>
             <div className="container-wide" style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1rem", flexWrap: "wrap" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                 <img
                   src="https://i.ibb.co/FRzgZFw/Logo-TDM-On-Black.png"
                   alt="Tacos Don Manolito"
-                  style={{ height: isMobile ? "40px" : "50px", width: "auto" }}
+                  style={{ 
+                    height: isMobile ? "55px" : "70px", 
+                    width: "auto",
+                    filter: "drop-shadow(0 6px 12px rgba(0,0,0,0.35))"
+                  }}
                   onError={(e) => {
                     e.target.style.display = "none";
                     if (e.target.nextElementSibling) e.target.nextElementSibling.style.display = "block";
