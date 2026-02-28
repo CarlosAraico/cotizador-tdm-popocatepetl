@@ -2314,16 +2314,36 @@
     }
 
     // Render React App
-    if (typeof React !== 'undefined' && typeof ReactDOM !== 'undefined') {
+    function renderReactApp() {
+      if (typeof React === 'undefined') {
+        console.error('React not loaded');
+        return;
+      }
+      if (typeof ReactDOM === 'undefined') {
+        console.error('ReactDOM not loaded');
+        return;
+      }
+      
       const rootElement = document.getElementById('root');
-      if (rootElement) {
+      if (!rootElement) {
+        console.error('Root element not found');
+        return;
+      }
+      
+      try {
         const root = ReactDOM.createRoot(rootElement);
         root.render(<App />);
-      } else {
-        console.error('Root element not found');
+        console.log('React App rendered successfully');
+      } catch (error) {
+        console.error('Error rendering React App:', error);
       }
+    }
+
+    // Ensure everything is loaded before rendering
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', renderReactApp);
     } else {
-      console.error('React or ReactDOM not loaded');
+      renderReactApp();
     }
   </script>
 </body>
