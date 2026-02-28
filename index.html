@@ -1268,16 +1268,15 @@
             )}
 
             <div style={{
-              display: "grid",
-              gridTemplateColumns: isMobile || isTabletPortrait
-                ? "1fr"
-                : isTabletLandscape
-                ? "minmax(0, 1.4fr) minmax(0, 1fr)"
-                : "minmax(0, 1.8fr) minmax(0, 1fr)",
+              display: isMobile || isTabletPortrait ? "flex" : "grid",
+              flexDirection: isMobile || isTabletPortrait ? "column" : undefined,
+              gridTemplateColumns: !isMobile && !isTabletPortrait
+                ? (isTabletLandscape ? "minmax(0, 1.4fr) minmax(0, 1fr)" : "minmax(0, 1.8fr) minmax(0, 1fr)")
+                : undefined,
               gap: "1.5rem",
               marginTop: "1.5rem"
             }}>
-              <div style={{ display: "grid", gap: "1.5rem", alignContent: "start" }}>
+              <div style={{ display: "grid", gap: "1.5rem", alignContent: "start", width: "100%" }}>
                 {/* SECTION 1: INICIO */}
                 <Section
                   title="1. Inicio"
@@ -1476,7 +1475,8 @@
                 position: isMobile || isTabletPortrait ? "static" : "sticky",
                 top: isMobile || isTabletPortrait ? "auto" : "120px",
                 alignSelf: "start",
-                maxHeight: isMobile || isTabletPortrait ? "none" : "80vh"
+                maxHeight: isMobile || isTabletPortrait ? "none" : "80vh",
+                width: "100%"
               }}>
                 <Section
                   title="Resumen"
